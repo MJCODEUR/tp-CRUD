@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>RECHERCHE</h1>
+<INput placeholder="search" id="search">
+    <br>
+ <table>
+    <thead></thead>
+    <tbody>
+        <tr>
+            <td>aloua</td>
+            <td>esso</td>
+            <td>lourou</td>
+            <td>slderdcfgd</td>
+            <td>zer343</td>
+            <td>AERI22</td>
+        </tr>
+        <tr>
+            <td>lourou</td>
+            <td>caterine</td>
+            <td>ooier</td>
+            <td>slderdfrjd</td>
+            <td>nbn452</td>
+            <td>AERI22</td>
+        </tr>
+        <tr>
+            <td>sameso</td>
+            <td>dremine</td>
+            <td>slder</td>
+            <td>jh2dckjd</td>
+            <td>zer63</td>
+            <td>AERI23</td>
+        </tr>
+        <tr>
+            <td>dernier</td>
+            <td>lasam</td>
+            <td>slder</td>
+            <td>slderdckjd</td>
+            <td>zer133</td>
+            <td>AERI22</td>
+        </tr>
+    </tbody>
+ </table>
+</body>
+<script>
+    let data = [
+        "aloua asso",
+        "23294839-323",                
+        "12136726-23294839-323",                
+        "Patali ama",
+        "23294839-323",                
+        "187616-233409-651",                
+        "andre renard",
+        "247809-323",                
+        "167086-34139-459",                
+        "patuo edrou",
+        "7639-3I8",                
+        "23056-23294839-623",                
+        "kokou clod",
+        "1048577-323",                
+        "12136726-23294839-323",                
+                ]
+
+                data.forEach(entry => {
+                    console.log(entry);
+                    let regex = /[a-z \s]+/gi;
+                    result = entry.match(regex)
+                    console.log(result);
+                    console.log('*'.repeat(20));
+                });
+                                
+                
+
+
+
+
+                                     // AVEC LA METHODE FOLTER ET FOR
+
+                                    // const bar = document.getElementById('search');
+                                    // bar.addEventListener('keyup', (e) => {
+                                    //     let toBeSearch = e.target.value
+                                    //     let lines = document.querySelectorAll('tr')
+                                    //     toFilter(toBeSearch, lines)
+                                    // })
+                                    // function toFilter(letters, items){
+                                    //     if(letters.length > 2){
+                                    //         for (let i = 0; i < items.length; i++) {
+                                    //             const element = items[i];
+                                    //             if(element.textContent.toLowerCase().includes(letters)){
+                                    //                 element.style.visibility = "visible"
+                                    //                 element.style.opacity = "1"
+                                    //             }
+                                    //             else{
+                                    //                 element.style.visibility = "hidden"
+                                    //                 element.style.opacity = "0"
+                                    //                 element.style.display = "none"
+                                    //             }
+                                    //             console.log(element)
+                                                
+                                    //         }
+                                    //     }
+                                    // }
+    // console.log(par);  
+</script>
+</html>

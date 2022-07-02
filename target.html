@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="myDiv">Mon div n°1</div>
+<div class="myDiv">Mon div n°2</div>
+<div class="myDiv">Mon div n°3</div>
+<div class="myDiv">Mon div n°4</div>
+<script>
+// function myDivClick(evt) {
+//  console.log("Clic détecté : passage en fond gris");
+//  evt.target.style.backgroundColor="#ccc";
+// }
+
+// var divs=document.getElementsByClassName("myDiv");
+// for (var i=0; i<divs.length; i++) {
+//  divs[i].addEventListener("click", myDivClick);
+// }
+
+
+
+function leClick(e) {
+    console.log("coll")
+    console.log(e)
+    e.target.style.color = "#003466"
+}
+
+var contenues = document.getElementsByClassName("myDiv")
+for (let i = 0; i < contenues.length; i++) {
+    const uneDiv = contenues[i];
+    console.log(uneDiv)
+
+    uneDiv.addEventListener("click", leClick)
+
+    
+}
+</script>
+</body>
+</html>

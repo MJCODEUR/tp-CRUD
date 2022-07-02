@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> gestion des utilisateurs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/fontawesome/css/all.css☻">
+</head>
+
+<body>
+    <script src="getTime.js"></script>
+    <header>
+        <div class="date_heure">
+            <span class="date_content">11/06/2022</span>
+            <span class="heure_content">09 : 23 00</span>
+        </div>
+        <div class="user_profil">
+
+            <!-- MODAL PROFIL -->
+            <input type="checkbox" id="profil_modal">
+            <label for="profil_modal" class="add_btn_label">
+                <div class="show_profil_infos">
+                    <div class="profil_image_wraper">
+                        <img src="profil.jpg" alt="">
+                    </div>
+                </div>
+            </label>
+
+            <!-- content profil infos -->
+            <div class="profil_infos_content">
+                <h1>infos user</h1>
+                <label for="pname" class="labels">nom :</label>
+                <label for="pname" class="values">aloua</label>
+
+                <label for="psurname" class="labels">prenom :</label>
+                <label for="psurname" class="values">esso</label>
+
+                <label for="pmail" class="labels">E-mail :</label>
+                <label for="pmail" class="values">aessotchossim@gmail.com</label>
+
+                <label for="profil_modal" class="close_profil">x</label>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="main_container">
+
+            <!-- NAVBAR -->
+
+            <div class="navbar">
+                <div class="search_group">
+                    <div class="search_input">
+                        <label for="search" >
+                            <input type="text" id="search" placeholder="chercher un utilisateur" onkeyup="filter(event)" >
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <label for="sexe_filter"></label>
+                    <select name="sexe_select" id="sexe_filter">
+                        <option value="">sexe</option>
+                        <option value="masculin">Masculin</option>
+                        <option value="feminin">Féminin</option>
+                    </select>
+                </div>
+
+                <div class="user_add_supp">
+                    <div class="add_user_group">
+                        <input type="checkbox" id="add_btn">
+                        <label for="add_btn" class="add_btn_label">
+                            <div class="add_user">ajouter +</div>
+                        </label>
+
+                        <!-- MODAL -->
+                        <div class="modal_box">
+                            <label for="add_btn" class="close_profil">X</label>
+                            <form id="form" onsubmit="return false;" autocomplete="off">
+                                <h2>nouveau utilisateur</h2>
+                                <!-- <label for="nom">nom</label> -->
+                                <input type="text" id="nom" placeholder="Nom">
+
+                                <!-- <label for="prenom">prenom</label> -->
+                                <input type="text" id="prenom" placeholder="Prenom">
+
+                                <!-- <label for="naissance">date de naissance</label> -->
+                                <input type="date" id="naissance" placeholder="Date de naissance">
+
+                                <!-- <label class="full-line" for="mail" >E-mail</label> -->
+                                <input type="email" id="mail" class="full-line" placeholder="E-mail">
+
+                                <!-- <label for="phone">Téléphone</label> -->
+                                <input type="" id="phone" pattern="[0-9]+" placeholder="Téléphone">
+
+                                <!-- <label for="sexe">Sexe</label> -->
+                               <select name="sexe_select" id="sexe">
+                                <option value="">sexe</option>
+                                <option value="masculin">Masculin</option>
+                                <option value="feminin">Féminin</option>
+                    </select>
+
+                                <!-- <button onclick="addRow()">AJOUTER +</button> -->
+
+
+
+                                <!-- new code -->
+                                <div>
+                                    <input type="submit" value="AJOUTER +" id="btn">
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="suppr_user" onclick="removeSelectedCheckbox()">supprimer</div>
+                </div>
+            </div>
+
+
+            <!-- DATABASE -->
+            <div class="azzz"></div>
+            <div class="table_container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>id</th>
+                            <th>nom</th>
+                            <th>prenom</th>
+                            <th>date de naissance</th>
+                            <th>Email</th>
+                            <th>phone</th>
+                            <th>sexe</th>
+                            <th>action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+</body>
+<!-- <script src="user_management.js"></script> -->
+<!-- <script src="nwscript.js"></script> -->
+<script src="script22.js"></script>
+
+</html>
