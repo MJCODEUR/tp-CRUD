@@ -218,7 +218,7 @@ function parcuorArray(arr) {
         phone = element.phone
         sexe = element.sexe
 
-        table = document.getElementsByTagName('tbody')[0];
+        // table = document.getElementsByTagName('tbody')[0];
         displayInTable()
     });
 }
@@ -344,23 +344,40 @@ function getUsersFromStorage() {
 
 function filter(event) {
     let key = event.target.value
+    let sexKey = document.getElementById('sexe_filter').value
     let users = getUsersFromStorage()
+
    let userFiltered = users.filter((user)=>{
         // apres il faut essayer avec include ; 'i' pour dire insensible à la case (majuscule ou minicule)
-        return (new RegExp(key, 'i')).test(user.nom) || 
+        return(new RegExp(sexKey, 'i')).test(user.sexe)&&
+         (new RegExp(key, 'i')).test(user.nom) || 
         (new RegExp(key, 'i')).test(user.prenom) ||
         (new RegExp(key, 'i')).test(user.naissance) ||
         (new RegExp(key, 'i')).test(user.mail) ||
-        (new RegExp(key, 'i')).test(user.phone) ||
-        (new RegExp(key, 'i')).test(user.sexe)
+        (new RegExp(key, 'i')).test(user.phone) 
+
+
+        
     })
     table.innerHTML = ''
-
+    console.log(sexKey);
     parcuorArray(userFiltered)
-
-
-    console.log(userFiltered);
 }
+
+// function filterSexe(event) {
+//     let chose = event.target.value
+//     let users = getUsersFromStorage()
+//     let last = users.filter((user)=>{
+//         // apres il faut essayer avec include ; 'i' pour dire insensible à la case (majuscule ou minicule)
+//         return (new RegExp(chose, 'i')).test(user.sexe)
+//     })
+//     table.innerHTML = ''
+
+//     parcuorArray(last)
+    
+//     console.log(chose);
+// }
+
 
 (function () {
     console.log('debut')
@@ -370,3 +387,4 @@ function filter(event) {
     })
     parcuorArray(dataFromLocalStorage)
 }())
+

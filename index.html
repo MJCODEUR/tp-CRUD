@@ -59,8 +59,9 @@
                             <input type="text" id="search" placeholder="chercher un utilisateur" onkeyup="filter(event)" >
                             <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
+                    <!-- onchange="filterSexe(event)" -->
                     <label for="sexe_filter"></label>
-                    <select name="sexe_select" id="sexe_filter">
+                    <select name="sexe_select" id="sexe_filter" >
                         <option value="">sexe</option>
                         <option value="masculin">Masculin</option>
                         <option value="feminin">Féminin</option>
@@ -124,7 +125,7 @@
                 <table>
                     <thead>
                         <tr>
-                            <th></th>
+                            <th>#</th>
                             <th>id</th>
                             <th>nom</th>
                             <th>prenom</th>
